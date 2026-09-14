@@ -1,0 +1,33 @@
+(.venv) PS E:\learn\Projects\AI-Study\hello_Agent\day1> python FirstAgentTest.py
+用户输入: 你好，请帮我查询一下今天北京的天气，然后根据天气推荐一个合适的旅游景点。
+========================================
+--- 循环 1 ---
+
+正在调用大语言模型...
+大语言模型响应成功。
+模型输出:
+Thought: 我需要先查询北京今天的实时天气，然后再根据天气情况搜索合适的旅游景点。  
+Action: get_weather(city="北京")
+
+Observation: 北京当前天气：Smoky haze，气温21摄氏度
+========================================
+--- 循环 2 ---
+
+正在调用大语言模型...
+大语言模型响应成功。
+模型输出:
+Thought: 已获取北京当前天气为Smoky haze（烟霾），气温21摄氏度。接下来需要根据该天气搜索适合的旅游景点。
+Action: get_attraction(city="北京", weather="Smoky haze")
+
+Observation: Under smoky haze, Beijing's Forbidden City and Temple of Heaven are ideal due to indoor attractions and minimal outdoor exposure. Both are historically significant and offer indoor experiences.
+========================================
+--- 循环 3 ---
+
+正在调用大语言模型...
+大语言模型响应成功。
+模型输出:
+Thought: 已获取北京实时天气，并得到适合烟霾天气的景点建议，可以整理最终答案。  
+Action: Finish[北京今天天气为烟霾（Smoky haze），气温约21°C。建议前往故宫博物院游览：这里历史文化底蕴深厚，且有较多室内展馆和宫殿空间，可减少户外暴露，比较适合烟霾天气。]
+
+任务完成，最终答案: 北京今天天气为烟霾（Smoky haze），气温约21°C。建议前往故宫博物院游览：这里历史文化底蕴深厚，且有较多室内展馆和宫殿空间，可减少户外暴露，比较适合烟霾天气。
+(.venv) PS E:\learn\Projects\AI-Study\hello_Agent\day1> 
